@@ -1,0 +1,32 @@
+describe("Profile section", () => {
+  it("tests Profile section", () => {
+    cy.viewport(1063, 700);
+    cy.visit("https://neuroqur.com/neuroqur");
+    cy.get("div.ng-star-inserted mat-icon").click();
+    cy.get("mat-list:nth-of-type(1) span").click();
+    cy.get("li:nth-of-type(3) > p").click();
+    cy.get("app-profile-settings > div:nth-of-type(1) div:nth-of-type(1) > input").click();
+    cy.get("app-profile-settings > div:nth-of-type(1) div:nth-of-type(1) > input").type("H");
+    cy.get("app-profile-settings > div:nth-of-type(1) div:nth-of-type(1) > input").type("Haneef");
+    cy.get("div:nth-of-type(2) > input").click();
+    cy.get("div:nth-of-type(2) > input").type("K");
+    cy.get("div:nth-of-type(2) > input").type("Khan");
+    cy.get("#profession-dropdown").click();
+    cy.get("#profession-dropdown").type("13");
+    cy.get("div:nth-of-type(4) > input").click();
+    cy.get("div:nth-of-type(4) > input").dblclick();
+    cy.type("{backspace}");
+    cy.get("div:nth-of-type(4) > input").click();
+    cy.type("{backspace}");
+    cy.get("div:nth-of-type(4) > input").click();
+    cy.get("app-profile-settings > div:nth-of-type(2) form > div:nth-of-type(1) input").click();
+    cy.get("app-profile-settings > div:nth-of-type(2) form > div:nth-of-type(1) input").type("Mardan12");
+    cy.get("app-profile-settings > div:nth-of-type(2) form > div:nth-of-type(2) input").click();
+    cy.get("app-profile-settings > div:nth-of-type(2) form > div:nth-of-type(2) input").type("M");
+    cy.get("app-profile-settings > div:nth-of-type(2) form > div:nth-of-type(2) input").type("Mardan12");
+    cy.get("form > div:nth-of-type(3) input").click();
+    cy.get("form > div:nth-of-type(3) input").type("M");
+    cy.get("form > div:nth-of-type(3) input").type("Mardan12");
+    cy.get("app-range-slider form > button").click();
+  });
+});

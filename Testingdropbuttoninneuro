@@ -1,0 +1,10 @@
+describe("Testing", () => {
+  it("tests Testing", () => {
+    cy.viewport(804, 613);
+    cy.visit("https://neuroqur.com/home");
+    cy.get("div.ng-star-inserted mat-icon").click();
+    cy.get("mat-list:nth-of-type(1) span").click();
+    cy.get("div.login-fields > div:nth-of-type(1) > input").type("haneefUllah00345@gmail.com");
+    cy.get("div.login-fields > div:nth-of-type(2) input").type("Haneef@32");
+  });
+});
